@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+}
+
+.container .image {
+  width: 50%;
+  height: 470px;
+}
+
+.container .image img {
+  width: 100%;
+  height: 470px;
+}
+
+.container .box {
+  width: 100%;
+}
+
+.container .counter {
+  width: 100px;
+  height: 50px;
+}
+
+.container .description .prices {
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+.container .desc {
+  height: 150px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,3 +1,5 @@
+
+
 fetch("https://jsonplaceholder.typicode.com/photos")
 .then((response) => response.json())
 .then((database) => {
@@ -16,6 +18,8 @@ fetch("https://jsonplaceholder.typicode.com/photos")
         let title = document.createElement("h5");
         let paragraph = document.createElement("p");
         let link = document.createElement("a");
+        
+        
 
         card.className = "card mt-5";
         card.style.width = "18rem";
@@ -24,12 +28,18 @@ fetch("https://jsonplaceholder.typicode.com/photos")
         strong.className = "data-id";
         title.className = "card-text";
         link.className = "btn btn-primary w-0";
+        link.data_id = "data-id"
+       
+        
+       
+       
+       
 
         img.src = `${data.url}`
         strong.innerText = `Id: ${data.id}`
         title.innerText = `Title: ${data.title}`;
         link.innerText = `More detail`;
-        link.href = "/change.html";
+        link.href = `change.html?data-id=${data.id}`;
 
         cardBody.appendChild(strong);
         cardBody.appendChild(title);
@@ -39,20 +49,8 @@ fetch("https://jsonplaceholder.typicode.com/photos")
         card.appendChild(cardBody);
         row.appendChild(card);
 
-
-        link.addEventListener("click",function(){
         
-            localStorage.getItem("cardBody");
-
-            let list = {
-                card,
-                img,
-                title,
-                link
-            }
-            lists.push(list);
-        })
-        localStorage.setItem("cardBoy",1)
+       
     })
     container.appendChild(row);
 });
